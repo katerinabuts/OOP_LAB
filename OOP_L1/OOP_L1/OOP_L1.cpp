@@ -17,7 +17,7 @@ void punkt(Airline *ob,int N) {
 	cout << "День недели:\n";
 	for (int i = 0; i < N; i++) {
 		if (ob[i].getDestination() == str) {
-			cout << ob[i].getDestination() << "\t\t\t" << ob[i].getFlightNumber() << "\t\t" << ob[i].getHours() << ":" << ob[i].getMinutes() << "\t" << ob[i].getTypeOfAircraft() << "\t" << ob[i].getWeekdays() << "\n";
+			ob[i].print();
 		}
 	}
 }
@@ -33,7 +33,7 @@ void nedelya(Airline *ob, int N) {
 	cout << "День недели:\n";
 	for (int i = 0; i < N; i++) {
 		if (ob[i].getWeekdays() == str) {
-			cout << ob[i].getDestination() << "\t\t\t" << ob[i].getFlightNumber() << "\t\t" << ob[i].getHours() << ":" << ob[i].getMinutes() << "\t" << ob[i].getTypeOfAircraft() << "\t" << ob[i].getWeekdays() << "\n";
+			ob[i].print();
 		}
 	}
 }
@@ -56,7 +56,7 @@ void time(Airline *ob, int N) {
 		if (ob[i].getWeekdays() == str)
 			if (ob[i].getHours()>h || (ob[i].getHours()==h && ob[i].getMinutes()>=m))
 		{
-			cout << ob[i].getDestination() << "\t\t\t" << ob[i].getFlightNumber() << "\t\t" << ob[i].getHours() << ":" << ob[i].getMinutes() << "\t" << ob[i].getTypeOfAircraft() << "\t" << ob[i].getWeekdays() << "\n";
+			ob[i].print();
 		}
 	}
 }
@@ -64,18 +64,19 @@ void time(Airline *ob, int N) {
 int main()
 {
 	setlocale(LC_CTYPE,"Russian");
-	Airline ob1("Manchester",8765,"Boeing 777",15,5,4),ob2,ob3("Paris", 467, "Boeing 777", 12, 40, 2);
+	Airline ob1("Manchester",8765,1,15,5,4),ob2,ob4(ob1),ob3("Paris", 467,3, 12, 40, 2);
 	std::string str;
 	int a,c;
 
 	ob2.setDestination("LA");
 	ob2.setFlightNumber(1598);
-	ob2.setTypeOfAircraft("Boeing 777");
+	ob2.setTypeOfAircraft(2);
 	ob2.setHours(1);
 	ob2.setMinutes(10);
 	ob2.setWeekdays(7);
-
-	Airline ob[3] = { ob1,ob2,ob3 };
+	
+	
+	Airline ob[4] = { ob1,ob2,ob3,ob4};
 
 	
 		
@@ -87,9 +88,9 @@ int main()
 			cin >> c;
 
 			switch (c) {
-			case 1: punkt(ob, 3); break;
-			case 2: nedelya(ob, 3); break;
-			case 3: time(ob, 3); break;
+			case 1: punkt(ob, 4); break;
+			case 2: nedelya(ob, 4); break;
+			case 3: time(ob, 4); break;
 			}
 		} while (c!=0);
 

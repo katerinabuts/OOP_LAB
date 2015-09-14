@@ -6,6 +6,7 @@ class Airline {
 	std::string destination;
 	int flightNumber;
 	std::string typeOfAircraft;
+	enum{Boeing777=1,Airbus310,Boeing747};
 	int hours;
 	int minutes;
 	std::string weekdays;
@@ -13,14 +14,14 @@ class Airline {
 
 public:
 	Airline();
-	Airline(std::string des, int fn, std::string toa, int h, int m, int wd);
+	Airline(std::string des, int fn, int toa, int h, int m, int wd);
 	Airline(const Airline &m);
 	~Airline();
 	void setDestination(std::string);
 	std::string getDestination();
 	void setFlightNumber(int);
 	int getFlightNumber();
-	void setTypeOfAircraft(std::string);
+	void setTypeOfAircraft(int);
 	std::string getTypeOfAircraft();
 	void setHours(int);
 	int getHours();
@@ -28,4 +29,5 @@ public:
 	int getMinutes();
 	void setWeekdays(int);
 	std::string getWeekdays();
+	void print();
 };
