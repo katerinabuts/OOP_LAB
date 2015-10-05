@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{94CA33FC-A875-4485-B832-1142C8A0FB66}</ProjectGuid>
+    <ProjectGuid>{6136814B-262B-4207-BF8F-CE2A6DA43285}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>OOPLab2</RootNamespace>
+    <RootNamespace>OOPLab5</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -79,22 +79,26 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="Kapitan.h" />
     <ClInclude Include="Korabl.h" />
     <ClInclude Include="Korvet.h" />
     <ClInclude Include="Parohod.h" />
     <ClInclude Include="Parusnik.h" />
+    <ClInclude Include="Port.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TransportnoeSredstvo.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Kapitan.cpp" />
     <ClCompile Include="Korabl.cpp" />
     <ClCompile Include="Korvet.cpp" />
-    <ClCompile Include="OOPLab2.cpp" />
+    <ClCompile Include="OOPLab5.cpp" />
     <ClCompile Include="Parohod.cpp" />
     <ClCompile Include="Parusnik.cpp" />
+    <ClCompile Include="Port.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
