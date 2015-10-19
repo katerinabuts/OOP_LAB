@@ -7,6 +7,8 @@ class Port {
 public:
 
 	Port *next;
+	virtual void set(int);
+	virtual Port* get(int);
 	virtual void add();
 	virtual void show();
 	virtual int getVodoIsm() { return 0; }
